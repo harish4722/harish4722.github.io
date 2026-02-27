@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harish | Embedded AI Engineer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="progress"></div>
+<div class="theme-toggle" onclick="toggleTheme()">
+    💡
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="container">
+    <h1>Harish Arulanandan</h1>
+    <h2><span id="typed"></span></h2>
+    <p class="subtitle">
+        Embedded AI Engineer | Edge Computing | Real-Time Systems
+    </p>
+    <a href="#projects" class="btn">View Projects</a>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="container" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+        I am an Embedded AI Engineer with experience in building and deploying 
+        intelligent systems on edge devices. My work focuses on real-time computer 
+        vision, model optimization, and performance-driven AI deployment.
+    </p>
+    <p>
+        I have hands-on experience with NVIDIA Jetson platforms, TensorRT, 
+        Triton Inference Server, OpenCV, and embedded systems. I aim to design 
+        efficient, reliable, and production-ready solutions that bridge hardware 
+        and artificial intelligence.
+    </p>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="container">
+    <h2 data-aos="fade-right">Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="card" onclick="openModal('jetson')" data-aos="zoom-in">
+        <h3>AI Based Smart Traffic Violation</h3>
+        <p class="hover-info">Raspberry Pi + YOLO</p>
+        </div>
+
+        <div class="card" onclick="openModal('livestream')" data-aos="zoom-in">
+            <h3>Live Stream AI Application</h3>
+            <p class="hover-info">Real-Time Object Detection</p>
+        </div>
+
+        <div class="card" onclick="openModal('esp32')" data-aos="zoom-in">
+            <h3>Attendance Tracker</h3>
+            <p class="hover-info">Real-Time Attendance System</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="container" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: harishsankari07@gmail.com</p>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <p id="modalTech"></p>
+    <p id="modalPerformance"></p>
+    <a id="modalGithub" class="github-btn" target="_blank">View GitHub</a>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
