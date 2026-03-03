@@ -11,6 +11,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("experienceTrack");
+    const slides = document.querySelectorAll(".experience-card");
+
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const skillSection = document.querySelector("#skills");
+    const skillFills = document.querySelectorAll(".skill-fill");
+
+    function animateSkills() {
+        const sectionTop = skillSection.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (sectionTop < triggerPoint) {
+            skillFills.forEach(fill => {
+                fill.style.width = fill.getAttribute("data-width");
+            });
+            window.removeEventListener("scroll", animateSkills);
+        }
+    }
+
+    window.addEventListener("scroll", animateSkills);
+});
+</script>
+
 <body>
 
 <div id="progress"></div>
@@ -42,6 +80,128 @@
         efficient, reliable, and production-ready solutions that bridge hardware 
         and artificial intelligence.
     </p>
+</section>
+
+
+<!-- ================= EXP ================= -->
+<section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="experience-wrapper">
+        <div class="experience-track" id="experienceTrack">
+
+            <div class="experience-card">
+                <h3>Embedded Engineer</h3>
+                <span class="company">Factana Computing Pvt Ltd</span>
+                <span class="duration">2024 – Present</span>
+            </div>
+
+            <div class="experience-card">
+                <h3>Python Developer</h3>
+                <span class="company">Previous Company</span>
+                <span class="duration">2023 – 2024</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= Tech Stack ================= -->
+<section id="tech-stack">
+    <div class="container">
+        <h2>Tech Stack</h2>
+
+        <div class="stack-grid">
+
+            <div class="stack-card">
+                <h3>Hardware</h3>
+                <div class="stack-items">
+                    <span>NVIDIA Jetson</span>
+                    <span>ESP32</span>
+                    <span>Raspberry Pi</span>
+                    <span>Embedded Systems</span>
+                </div>
+            </div>
+
+            <div class="stack-card">
+                <h3>AI & Optimization</h3>
+                <div class="stack-items">
+                    <span>TensorRT</span>
+                    <span>Triton Server</span>
+                    <span>PyTorch</span>
+                    <span>OpenCV</span>
+                </div>
+            </div>
+
+            <div class="stack-card">
+                <h3>Programming</h3>
+                <div class="stack-items">
+                    <span>Python</span>
+                    <span>Embedded C</span>
+                    <span>PyQt</span>
+                </div>
+            </div>
+
+            <div class="stack-card">
+                <h3>Tools & Deployment</h3>
+                <div class="stack-items">
+                    <span>Git</span>
+                    <span>Linux</span>
+                    <span>Docker</span>
+                    <span>JetPack</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= Tech skills ================= -->
+<section id="skills">
+    <div class="container">
+        <h2>Core Skills</h2>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>TensorRT Optimization</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>NVIDIA Jetson Deployment</span>
+                <span>90%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>Computer Vision (OpenCV)</span>
+                <span>80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>Python Development</span>
+                <span>88%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" data-width="88%"></div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
